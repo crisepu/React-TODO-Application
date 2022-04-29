@@ -1,12 +1,19 @@
-
-/* 
-
-    You can write your own styles here...
+body {
+    background-color: coral;
+}
+input {
+    border: none;
+}
+.newTodo {
+    border: none;
+    border-bottom: solid 1px;
+}
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 100px;
+    margin: 5px;
+    color: bisque;
     
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
 
-*/
+}
