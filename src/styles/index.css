@@ -1,9 +1,6 @@
 body {
     background-color: coral;
 }
-input {
-    border: none;
-}
 .todo {
     border: none;
     border-bottom: solid 1px;
