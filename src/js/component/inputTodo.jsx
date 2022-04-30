@@ -11,7 +11,7 @@ const InputTodo = () => {
 
 	return (
 		<>
-			<li className="list-group-item border-0">
+			<li className="list-group-item border-bottom">
 				<input
 					className="border-0 w-100"
 					type="text"
@@ -19,13 +19,13 @@ const InputTodo = () => {
 					placeholder="What need to be done?"
 					onKeyDown={(e) => {
 						if (e.key === "Enter" && inputText.value != "") {
-							console.log("probando enter");
 							addTodo(inputText.value);
+							inputText.value = "";
 						}
 					}}
 				/>
 			</li>
-			{todo.length >= 1 ? <Todo todo={todo} /> : ""}
+			<Todo todo={todo} />
 		</>
 	);
 };

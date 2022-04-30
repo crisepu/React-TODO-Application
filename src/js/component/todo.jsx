@@ -1,20 +1,17 @@
 import React from "react";
 
 const Todo = (props) => {
-	function showTodo() {
-		!!props.todo &&
+	const arrayTodo =
+		props.todo.length > 0 &&
 		props.todo.map((todo, index) => {
-			console.log(todo)
 			return (
-				<li key={index} className="list-group-item border-0">
-					{todo}
+				<li key={index} className="list-group-item border-bottom">
+					{todo} <button onClick={() => {deletetodo()}}>X</button>
 				</li>
 			);
 		});
-	}
-		
-return {showTodo}
 
+	return <>{arrayTodo}</>;
 };
-
+             
 export default Todo;
