@@ -1,24 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
+import InputTodo from "./inputTodo"
 
 //create your first component
 const ListTodos = () => {
-	const [todo, setTodo] = useState(null);
-	const [count, setCounter] = useState(0);
-
-	const newTodo = () => {
-		
-		return <li className="list-group-item newTodo">A second item</li>;
-	};
 
 	return (
+		<>
+			<h1 className="title">todos</h1>
 		<div className="container d-flex justify-content-center">
 			<ul className="list-group w-50">
-				<li className="list-group-item">
-					<input type="text" placeholder="What need to be done?" />
-					{newTodo()}
-				</li>
+				<li className="list-group-item"><InputTodo/></li>
 			</ul>
 		</div>
+		</>
+		
 	);
 };
 

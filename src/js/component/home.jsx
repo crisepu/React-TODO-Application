@@ -5,7 +5,6 @@ import ListTodos from "./listTodos.jsx";
 const Home = () => {
 	return (
 		<>
-			<h1 className="title">todos</h1>
 			<ListTodos />
 		</>
 	);
