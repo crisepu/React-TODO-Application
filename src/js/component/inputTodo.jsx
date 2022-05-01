@@ -9,6 +9,11 @@ const InputTodo = () => {
 		setTodo([...todo, text]);
 	};
 
+	const deleteTodo = (string) => {
+		const newTodo = todo.filter((text) => text !== string);
+		setTodo(newTodo);
+	};
+
 	return (
 		<>
 			<li className="list-group-item border-bottom">
@@ -25,7 +30,7 @@ const InputTodo = () => {
 					}}
 				/>
 			</li>
-			<Todo todo={todo} />
+			<Todo todo={todo} deleteTodo={deleteTodo} />
 		</>
 	);
 };

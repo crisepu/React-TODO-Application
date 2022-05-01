@@ -6,12 +6,27 @@ const Todo = (props) => {
 		props.todo.map((todo, index) => {
 			return (
 				<li key={index} className="list-group-item border-bottom">
-					{todo} <button onClick={() => {deletetodo()}}>X</button>
+					{" "}
+					{todo}
+					<button
+						className="btn btn-outline-light float-end"
+						onClick={() => {
+							props.deleteTodo(todo);
+						}}>
+						X
+					</button>
 				</li>
 			);
 		});
 
-	return <>{arrayTodo}</>;
+	return (
+		<>
+			{arrayTodo}
+			<li className="list-group-item border-bottom itemLeft">
+				Pending Activities: {props.todo.length}
+			</li>
+		</>
+	);
 };
-             
+
 export default Todo;
